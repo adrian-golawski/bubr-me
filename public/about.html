@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>🦫 Bubr homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/colors.css">
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="header-text">O stronie</h1>
+        </header>
+        <nav>
+            <a href="/"">Strona Główna</a> |
+            <a href=" /galeria.html">Galeria</a> |
+            <a href="/bobry.html">Bobry</a> |
+            <a href="/about.html">= O stronie =</a>
+        </nav>
+
+        <figure>
+            <div class="avatar-container">
+                <img src="/images/bubr_2.jpg" class="avatar" alt="zdjęcie uśmiechniętego bobra">
+                <figcaption>Pocieszny bóbr ponownie</figcaption>
+            </div>
+        </figure>
+        <section aria-labelledby="co-to-za-strona">
+            <h2 id="co-to-za-strona">Co to za strona?</h2>
+            <p>
+                Strona została stworzona przez Adriana Goławskiego na potrzeby przedmiotu Architektury i Technologie
+                Systemów Internetowych. Jest dostępna w sieci Internet dzięki dostarczycielowi tanich VPSów
+                <a href="https://mikr.us/" target="_blank" rel="noopener noreferrer">mikr.us</a>.
+            </p>
+        </section>
+        <section aria-labelledby="wymagania">
+            <h2 id="wymagania">W jaki sposób odnosi się do wymagań?</h2>
+            <p>
+                Projekt uwzględnia wymagania opisane w dostarczonym <a href="/Wymagania - Projekt.pdf" target="_blank"
+                    rel="noopener noreferrer">dokumencie</a>:
+            <ul>
+                <li>Serwis wykonano na bazie HTML 5 ze względu na zgodę uzyskaną na forum przedmiotu.</li>
+                <li>
+                    Strona wykorzystuje nietrywialne reguły CSS, m.in. responsywne selektory <code>@media{}</code>
+                    reagujące na szerokość ekranu.
+                    Przykłady zastosowania:
+
+                </li>
+                <ul>
+                    <li>Dynamiczne ustawienie obrazów w <a href="/galeria.html" target="_blank"
+                            rel="noopener noreferrer">galerii</a></li>
+                    <li>Dynamiczne dopasowanie wielkości treści serwisu</li>
+                    <li>Zmniejszenie wcięć w listach dla większej czytelności</li>
+                    <li>Dodatkowo wykorzystuję animacje CSS do żartów (o których więcej w punkcie o skryptach)</li>
+                </ul>
+                <li>Strona została przetestowana na Chrome, Firefox, Safari i Lynx. Najbardziej zaawansowane funkcje
+                    przeglądarek wykorzystane w projekcie to reguły CSS (<code>@media (min-width: 500px){}</code>),
+                    które są dostępne w Chrome od 2015 roku.</li>
+                <li>Dostępność dla niepełnosprawnych została sprawdzona przy pomocy narzędzia <a
+                        href="https://www.npmjs.com/package/accessibility-checker" target="_blank"
+                        rel="noopener noreferrer">Accessibility Checker</a>. Świadomie zastosowałem m.in.:</li>
+                <ul>
+                    <li>
+                        Semantyczne znaczniki HTML 5 takie jak <code>&lt;nav&gt; &lt;header&gt; &lt;section&gt;</code>
+                        ułatwiające nawigację użytkownikom korzystającym z czytników ekranu,
+                    </li>
+                    <li>Atrybuty <code>aria-labelledby</code>, które pomagają odnaleźć kontekst dla sekcji,</li>
+                    <li>Test kontrastu napisów (m.in. zwiększyłem kontrast stopki) dla osób niedowidzących,</li>
+                    <li>Wszystkie obrazki użyte na stronie mają zapewnione teksty alternatywne.</li>
+                </ul>
+                <li>Serwis nie potrzebuje do działania JavaScriptu, ponieważ pisałem go w czystym HTMLu, jednak dodałem
+                    kilka ukrytych żartów, które można odnaleźć klikając na elementy strony.</li>
+                <ul>
+                    <li>Dowolny obrazek, na który kliknie użytkownik zaczyna się kręcić.</li>
+                    <li>
+                        Kliknięcie na stopkę podmienia ją na losowy cytat wielkiej osobistości z API <a
+                            href="https://api.quotable.io">Quotable</a>.
+                        Cytat ten przesyłany jest żądaniem dzięki technologii AJAX (przy pomocy funkcji
+                        <code>fetch()</code> żądaniem HTTP przez serwer proxy, aby zapewnić bezpieczeństwo CORS
+                        (Cross-Origin Request Security). W przeciwnym razem przeglądarka blokowałaby zapytanie do obcego
+                        API. Kod mojego prostego serwera proxy jest załączony w paczcze z rozwiązaniem
+                    </li>
+                </ul>
+                <li>Serwer ma system nawigacji między stronami ze statycznym zaznaczeniem aktywnej podstrony.</li>
+                <li>Strona opisowa istnieje. Właśnie ją czytamy.</li>
+                <li>Starałem się, aby serwis był czytelny, zachował responsywność na wielu ekranach i był dostępny w
+                    internecie.</li>
+            </ul>
+
+            </p>
+        </section>
+
+        <section aria-labelledby="kod-zrodlowy">
+            <h2 id="kod-zrodlowy">Gdzie mogę zobaczyć kod źródłowy strony?</h2>
+            <p>
+                Projekt jest wystawiony publicznie i dostępny na serwisie <a
+                    href="https://github.com/adrian-golawski/bubr-me">Github</a>. Kod został również zapakowany w plik
+                archiwum i przesłany za pomocą platformy Moodle.
+            </p>
+        </section>
+
+        <footer>
+            <p id="footer-text">Pamiętajcie o bobrach, to cudowne zwierzęta!</p>
+        </footer>
+    </div>
+</body>
+
+</html>

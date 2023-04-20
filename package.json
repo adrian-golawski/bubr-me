@@ -1,0 +1,23 @@
+{
+  "name": "bubr.me",
+  "version": "1.0.0",
+  "description": "A simple webpage for my Web Development lecture",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrian-golawski/bubr.me.git"
+  },
+  "author": "Adrian Goławski (Pan Bubr)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrian-golawski/bubr.me/issues"
+  },
+  "homepage": "https://github.com/adrian-golawski/bubr.me#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
